@@ -2,3 +2,37 @@
     color: lightgrey;
     text-decoration: line-through;
 }
+
+.task {
+    display: flex;
+    margin: 0 -3rem 4px;
+    padding: 1rem 2.5rem;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    font-size: 0.7rem;
+    position: relative;
+    text-align: left;
+}
+
+.task.completed:before {
+    animation: strikeitem 0.5s ease-out 0s forwards;
+}
+
+.btn {
+    display: inline-block;
+    padding-left: 3px;
+    margin: auto;
+
+}
+
+.buttons {
+    display: inline-block;
+    
+}
+
+@keyframes strikeitem {
+    to {
+        width: calc(100% + 1rem);
+    }
+}
